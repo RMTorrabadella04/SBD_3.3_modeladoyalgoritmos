@@ -1,4 +1,5 @@
 Fecha;FK_TipoDato;Anyo;Valor;Secreto;REF_ID_RELACIONAL;Trimestre;Promedio_Trimestral
+Fecha;FK_TipoDato;Anyo;Valor;Secreto;REF_ID_RELACIONAL;Trimestre;Promedio_Trimestral
 2017-08-31 22:00:00;1;2017;1,8;False;IPC251856;4;1,7
 2017-09-30 22:00:00;1;2017;1,6;False;IPC251856;4;1,7
 2017-10-31 23:00:00;1;2017;1,7;False;IPC251856;1;1,4
