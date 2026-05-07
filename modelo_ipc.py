@@ -53,7 +53,9 @@ def ipc():
         y_train, y_val = y.iloc[train_idx], y.iloc[val_idx]
 
         # Compatible con todas las versiones
-        model.fit(X_train, y_train)
+        model.fit(X_train, y_train,
+                eval_set=[(X_train, y_train), (X_val, y_val)],
+                verbose=100)
 
         y_pred = model.predict(X_val)
 

@@ -28,7 +28,7 @@ def ipv():
     y = np.log1p(df["Valor"])
 
     model = XGBRegressor(
-        n_estimators=800,
+        n_estimators=200,
         learning_rate=0.02,
         max_depth=3,
         subsample=0.8,
@@ -46,7 +46,9 @@ def ipv():
         X_train, X_val = X.iloc[train_idx], X.iloc[val_idx]
         y_train, y_val = y.iloc[train_idx], y.iloc[val_idx]
 
-        model.fit(X_train, y_train)
+        model.fit(X_train, y_train,
+                eval_set=[(X_train, y_train), (X_val, y_val)],
+                verbose=100)
 
         y_pred = model.predict(X_val)
 
